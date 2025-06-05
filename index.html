@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Krithika's Portfolio.">
+    <title>Krithika - Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: "Poppins", serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(18, 18, 62);
+
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(170, 107, 228);
+            font-size: 1.04rem;
+        }
+
+        main hr {
+            border: 0;
+            background: rgb(153, 153, 226);
+            height: 1.2px;
+            margin: 40px 84px;
+
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 70px 0;
+            padding: 25px 20px;
+        }
+
+        .firstsection>div {
+            width: 30%;
+
+        }
+
+        .leftsection {
+            font-size: 2.5rem;
+        }
+
+        .leftsection .btn {
+            padding: 12px;
+            background: rgb(18, 18, 62);
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .leftsection .btn:hover {
+            background: white;
+            color: rgb(18, 18, 62);
+            border-color: rgb(18, 18, 62);
+            transform: scale(1.05);
+        }
+
+        .rightsection img {
+            width: 100%;
+        }
+
+        .purple {
+            color: rgb(170, 107, 228);
+            font-size: 3.8rem;
+        }
+
+        #element {
+            color: rgb(170, 107, 228);
+        }
+
+        .about-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 5px 5px;
+            max-width: 1200px;
+            margin: auto;
+            column-gap: 150px;
+            /* wider gap between image and text */
+            row-gap: 40px;
+        }
+
+        .about-img {
+            width: 360px;
+            height: 450px;
+            border-radius: 30% / 20%;
+            overflow: hidden;
+            border: 2px solid rgb(170, 107, 228);
+            box-shadow: 0 10px 25px rgba(170, 107, 228, 0.4);
+            flex-shrink: 0;
+        }
+
+        .about-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-text {
+            max-width: 650px;
+        }
+
+        .about-text h1 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .about-text p {
+            color: #ccc;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        @media (max-width: 768px) {
+            .about-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about-text {
+                text-align: center;
+                padding: 0 10px;
+            }
+
+            .about-text p {
+                text-align: center;
+            }
+        }
+
+        .thirdsection {
+            max-width: 80vw;
+            margin: auto;
+
+        }
+
+        .thirdsection h1 {
+            font-size: 1.9rem;
+        }
+
+        .leftbox {
+            font-size: 1.5rem;
+        }
+
+        u {
+            border: 10px;
+        }
+
+        .rightbox {
+            font-size: 1.5rem;
+        }
+
+        .progress-container {
+            width: 100%;
+            background-color: rgb(202, 197, 197);
+            border: 1px solid #000021;
+            border-radius: 5px;
+            height: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background-color: rgb(109, 109, 179);
+            line-height: 30px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 10px;
+            transition: width 0.5s ease;
+            white-space: nowrap;
+        }
+
+        .fourthsection {
+            max-width: 80vw;
+            margin: auto;
+        }
+
+        .education-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .edu-box {
+            background: rgb(18, 18, 62);
+            padding: 20px;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease-in-out;
+            height: 650px;
+        }
+
+        .edu-image {
+            background-color: white;
+        }
+
+        .edu-box:hover {
+            transform: scale(1.05);
+        }
+
+        .edu-box .btn {
+            padding: 2px;
+            background: white;
+            color: rgb(18, 18, 62);
+            border: 3px solid white;
+            border-radius: 3px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .edu-box .btn:hover {
+            transform: scale(1.05);
+        }
+
+        .fifthsection {
+            margin: auto;
+            max-width: 80vw;
+        }
+
+        .project-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .project-box {
+            background: rgb(18, 18, 62);
+            padding: 20px;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease-in-out;
+            height: 750px;
+        }
+
+        .project-box:hover {
+            transform: scale(1.05);
+        }
+
+        .project-box img {
+            border-radius: 20px;
+            border: 2px solid white;
+        }
+
+        .project-box .btn {
+            padding: 2px;
+            background: white;
+            color: rgb(18, 18, 62);
+            border: 3px solid white;
+            border-radius: 3px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .project-box .btn:hover {
+            transform: scale(1.05);
+        }
+
+        .sixthsection {
+            margin: auto;
+            max-width: 80vw;
+        }
+
+        .certificate-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .certificate-box {
+            background: rgb(18, 18, 62);
+            padding: 20px;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease-in-out;
+            height: 400px;
+        }
+
+        .certificate-box .btn {
+            padding: 2px;
+            background: white;
+            color: rgb(18, 18, 62);
+            border: 3px solid white;
+            border-radius: 3px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .certificate-box:hover {
+            transform: scale(1.05);
+        }
+
+        .eigthsection {
+            margin: auto;
+            max-width: 80vw;
+        }
+
+        .por-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .por-box {
+            background: rgb(18, 18, 62);
+            padding: 20px;
+            width: 350px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease-in-out;
+            height: 500px;
+        }
+
+        .por-box:hover {
+            transform: scale(1.05);
+        }
+
+
+        .seventhsection {
+            max-width: 80vw;
+            margin: auto;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgb(18, 18, 62);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+        }
+
+        .contact-form label {
+            margin-bottom: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: 2px solid rgb(170, 107, 228);
+        }
+
+        .contact-form .btn {
+            align-self: center;
+            width: fit-content;
+            padding: 10px 20px;
+            background-color: #ccc;
+            color: rgb(18, 18, 62);
+            cursor: pointer;
+        }
+
+        .contact-form .btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* Base style (desktop by default) */
+        .container {
+            display: flex;
+            padding: 40px;
+        }
+
+        /* Tablet */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                padding: 20px;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 480px) {
+            .container {
+                padding: 10px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Krithika's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#edu">Education</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#certificates">Certifications</a></li>
+                    <li><a href="#roles">Roles</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstsection" id="home">
+            <div class="leftsection">
+                Hello! I'm
+                <div><span class="purple">Krithika Paladi</span></div>
+                <div>I am a Passionate
+                </div>
+                <span id="element"></span>
+                <br>
+                <a href="resume.pdf" download target="_blank" rel="noopener noreferrer">
+                    <button class="btn">Download Resume</button>
+                </a>
+            </div>
+            <div class="rightsection">
+                <img src="Image1.png">
+            </div>
+
+        </section>
+        <hr>
+        <section class="about-container" id="about">
+            <div class="about-img">
+                <img src="Image10.jpg" alt="Krithika Paladi" />
+            </div>
+            <div class="about-text">
+                <h1>About Me</h1>
+                <p>I am a Final-year Computer Science and Engineering undergraduate with a specialization in IoT,
+                    Cybersecurity, and Blockchain Technology at Chaitanya Bharathi Institute of Technology. I am
+                    passionate
+                    about developing solutions that bridge technology and innovation to create meaningful impact in
+                    the real
+                    world.</p>
+                <br>
+                <p>With a strong foundation in Python, Java. I have worked on various projects that demonstrate my
+                    technical versatility. My web development experience includes building interactive interfaces and
+                    dynamic chatbot applications, showcasing my growing proficiency in frontend and backend
+                    technologies..</p>
+                <br>
+                <p>Additionally, I have experience in AI/ML with projects like handwritten digit classification and
+                    image entity extraction for hackathons, utilizing frameworks such as scikit-learn and TensorFlow. My
+                    recent exploration into blockchain technology and cloud platforms has further broadened my technical
+                    horizons.I am driven by a mindset of continuous learning, a passion for innovation, and a dedication
+                    to
+                    staying at the cutting edge of emerging technologies. As I continue to expand my knowledge and work
+                    on new
+                    projects, I strive to create robust, efficient, and impactful solutions in every domain I explore
+                </p>
+            </div>
+        </section>
+        <hr>
+        <section class="thirdsection" id="skills">
+            <h1 style="text-align: center; padding: 5px 5px;">Skills</h1>
+            <br>
+            <br>
+            <h3>HTML</h3>
+            <div class="progress-container">
+                <div class="progress-bar" style="width: 85%;">85%</div>
+            </div>
+            <br>
+            <h3>CSS</h3>
+            <div class="progress-container">
+                <div class="progress-bar" style="width:75%;">75%</div>
+            </div>
+            <br>
+            <h3>React JS</h3>
+            <div class="progress-container">
+                <div class="progress-bar" style="width: 60%;">60%</div>
+            </div>
+            <br>
+            <h3>Python</h3>
+            <div class="progress-container">
+                <div class="progress-bar" style="width: 80%;">80%</div>
+            </div>
+            <br>
+            <h3>Java</h3>
+            <div class="progress-container">
+                <div class="progress-bar" style="width: 60%;">60%</div>
+            </div>
+            <br>
+            <h3>SQL</h3>
+            <div class="progress-container">
+                <div class="progress-bar" style="width: 70%;">70%</div>
+            </div>
+        </section>
+        <hr>
+        <section class="fourthsection" id="edu">
+            <h1 style="text-align: center; padding: 5px 5px;">My Education</h1>
+            <div class="education-container">
+                <div class="edu-box">
+                    <div class="edu-image">
+                        <img src="Image2.png" alt="cbit_logo" width="300px" height="350px">
+                    </div>
+                    <br>
+                    <p><b>Chaitanya Bharathi Institute of Technology (2022-2026)</b></p>
+                    <br>
+                    <p>Computer Science and Engineering
+                        specialization in IOT, Cybersecurity including Blockchain Technology
+                    </p>
+                    <br>
+                    <p>CGPA : 9.37</p>
+                    <br>
+                    <a href="Memo1.pdf" download target="_blank" rel="noopener noreferrer">
+                        <button class="btn">View Certificate</button>
+                    </a>
+                </div>
+                <div class="edu-box">
+                    <div class="edu-image3">
+                        <img src="Image3.jpeg" alt="clg_logo" width="300px" height="355px">
+                    </div>
+                    <br>
+                    <p><b>Sri Chaitanya Junior college , DD colony , Hyderabad (2020 - 2022)</b></p>
+                    <br>
+                    <p>Intermediate (XII)</p>
+                    <p>Major: MPC(Maths, Physics, Chemistry)</p>
+                    <br>
+                    <p>Percentage : 98.4%</p>
+                    <br>
+                    <a href="Memo2.pdf" download target="_blank" rel="noopener noreferrer">
+                        <button class="btn">View Certificate</button>
+                    </a>
+                </div>
+                <div class="edu-box">
+                    <div class="edu-image4">
+                        <img src="Image4.png" alt="school_logo" width="300px" height="355px">
+                        <br>
+                        <br>
+                        <p><b>Sri Chaitanya Techno School (2013-2020)</b></p>
+                        <br>
+                        <p>Class : X</p>
+                        <br>
+                        <p>CGPA : 10</p>
+                        <br>
+                        <a href="Memo3.pdf" download target="_blank" rel="noopener noreferrer">
+                            <button class="btn">View Certificate</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="fifthsection" id="projects">
+            <h1 style="text-align: center; padding: 5px 5px;">Projects</h1>
+            <div class="project-container">
+                <div class="project-box">
+                    <h3>OWASP Juice Shop Vulnerability Assessment</h3>
+                    <br>
+                    <img src="Image5.png" alt="owasp_juice_shop" width="300px" height="250px">
+                    <p>Conducted a security assessment of OWASP Juice Shop, identifying and exploiting vulnerabilities
+                        like Broken Access Control, SQL Injection, Second-order SQL Injection, and various XSS types.
+                        Utilized Burp Suite, OWASP ZAP, and SQLMap for testing and automation. Documented findings with
+                        proof of exploitation and mitigation strategies to enhance web security.
+                        <br>
+                        <br>
+
+                        Kali Linux | Burp Suite | OWASP ZAP | SQLMap | Browser Developer Tools
+                        <br>
+                        📅 May – June 2024
+                        <br>
+                        <br>
+                        <a href="Report2.pdf" download target="_blank" rel="noopener noreferrer">
+                            <button class="btn">View Document</button>
+                        </a>
+                    </p>
+                </div>
+                <div class="project-box">
+                    <h3>Testfire.net Vulnerability Assessment</h3>
+                    <br>
+                    <img src="Image6.jpg" alt="testfire" width="300px" height="250px">
+                    <p>Conducted a full penetration test on Testfire.net, following ethical hacking methodologies.
+                        Exploited SQL Injection and XSS to extract sensitive data and manipulate sessions. Used Nmap,
+                        OSINT, Nikto, and Dirb for network intelligence and misconfiguration scanning. Applied
+                        post-exploitation techniques and documented vulnerabilities with security recommendations.
+                        <br>
+                        <br>
+
+                        Kali Linux | Nmap | Nikto | Burp Suite | SQLMap | Metasploit Framework
+                        <br>
+                        📅 June – July 2024
+                        <br>
+                        <br>
+                        <a href="Report1.pdf" download target="_blank" rel="noopener noreferrer">
+                            <button class="btn">View Document</button>
+                        </a>
+                    </p>
+                </div>
+                <div class="project-box">
+                    <h3>Handwritten Digit Prediction - Classification Analysis</h3>
+                    <br>
+                    <img src="Image7.png" alt="hand_digit" width="300px" height="250px">
+                    <p>Developed an ML model for handwritten digit classification using the MNIST dataset. Implemented
+                        preprocessing, feature extraction, and algorithm comparison (Logistic Regression, SVM, CNNs)
+                        with TensorFlow and Keras. Optimized performance through hyperparameter tuning and evaluation
+                        metrics. Deployed for real-time digit recognition.
+                        <br>
+                        <br>
+                        Python | TensorFlow | Keras | Scikit-Learn | NumPy | Pandas | Matplotlib
+                        <br>
+                        📅 July – August 2024
+                        <br>
+                        <br>
+                        <a href="https://github.com/paladikrithika/Hand-Written-Digit-Prediction.git" download
+                            target="_blank" rel="noopener noreferrer">
+                            <button class="btn">GitHub</button>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="sixthsection" id="certificates">
+            <h1 style="text-align: center; padding: 5px 5px;">Certifications</h1>
+            <br>
+            <div class="certificate-container">
+                <div class="certificate-box">
+                    <img src="Image8.png" alt="Avatar" style="width:300px; height:250px;">
+                    <br>
+                    <br>
+                    <h1>Java Programming.</h1>
+                    <br>
+                    <a href="Cert1.pdf" download target="_blank" rel="noopener noreferrer">
+                        <button class="btn">View Certificate</button>
+                    </a>
+                </div>
+                <div class="certificate-box">
+                    <img src="Image9.jpg" alt="Avatar" style="width:300px; height:250px;">
+                    <br>
+                    <br>
+                    <h1>Web Development</h1>
+                    <br>
+                    <a href="Cert2.pdf" download target="_blank" rel="noopener noreferrer">
+                        <button class="btn">View Certificate</button>
+                    </a>
+                </div>
+                <div class="certificate-box">
+                    <img src="Image10.png" alt="Avatar" style="width:300px; height:250px;">
+                    <br>
+                    <br>
+                    <h1>Cyber Security and Ethical Hacking</h1>
+                    <br>
+                    <a href="Cert3.pdf" download target="_blank" rel="noopener noreferrer">
+                        <button class="btn">View Certificate</button>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="eigthsection" id="roles">
+            <h1 style="text-align: center; padding: 5px 5px;">Positions of Responsibility</h1>
+            <div class="por-container">
+                <div class="por-box">
+                    <img src="Image12.jpg" alt="nexiot logo" style="width:350px; height:280px;">
+                    <br>
+                    <br>
+                    <h1>Treasurer – Nexiot Club</h1>
+                    <br>
+                    <p>Jan 2025 – Present</p>
+                    <br>
+                    <p>Handling the club's financial operations, budgeting, and resource allocation for events and
+                        workshops.</p>
+                </div>
+                <div class="por-box">
+                    <img src="Image11.jpg" alt="ewb logo" style="width:350px; height:280px;">
+                    <br>
+                    <br>
+                    <h1>Junior Coordinator – EWB</h1>
+                    <br>
+                    <p>Aug 2023 – Apr 2024</p>
+                    <br>
+                    <p>Assisted in organizing outreach events and supported project execution as part of the core
+                        student team.</p>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="seventhsection" style="text-align: center; padding: 5px 5px;" id="contact">
+            <p style="font-size: 1rem; color: #ccc;">Let's Connect</p>
+            <h1 style="font-size: 1.8rem; margin-bottom: 30px;">Contact Me</h1>
+            <form action="https://formspree.io/f/xeokogoq" method="POST" class="contact-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter full name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="_replyto" placeholder="Enter email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Enter your message"></textarea>
+
+                <button type="submit" class="btn"><b>Send Message</b></button>
+            </form>
+        </section>
+        <div style="text-align:center; margin-top: 20px;">
+            <a href="https://www.linkedin.com/in/paladi-krithika-74372425b/" target="_blank"
+                style="color: white; margin: 0 10px; ">LinkedIn</a> |
+            <a href="https://github.com/paladikrithika" target="_blank" style="color: white; margin: 0 10px;">GitHub</a>
+            |
+            <a href="paladi.krithika@gmail.com" style="color: white; margin: 0 10px;">Email</a>
+        </div>
+        <footer style="text-align: center; margin: 20px 0; color: gray;">
+            © 2025 Krithika. All rights reserved.
+        </footer>
+    </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer.', 'Cybersecurity Enthusiast.', 'AIML Learner.', 'Ethical Hacker.'],
+            typeSpeed: 25,
+        });
+    </script>
+</body>
+</body>
+
+</html>
