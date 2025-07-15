@@ -180,16 +180,6 @@
             }
         }
 
-        .thirdsection {
-            max-width: 80vw;
-            margin: auto;
-
-        }
-
-        .thirdsection h1 {
-            font-size: 1.9rem;
-        }
-
         .leftbox {
             font-size: 1.5rem;
         }
@@ -202,27 +192,56 @@
             font-size: 1.5rem;
         }
 
-        .progress-container {
-            width: 100%;
-            background-color: rgb(202, 197, 197);
-            border: 1px solid #000021;
-            border-radius: 5px;
-            height: 30px;
-            position: relative;
-            overflow: hidden;
+        .skills-section {
+            max-width: 90vw;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        .progress-bar {
-            height: 100%;
-            background-color: rgb(109, 109, 179);
-            line-height: 30px;
-            color: white;
-            font-weight: bold;
+        .skills-section h1 {
             text-align: center;
-            border-radius: 10px;
-            transition: width 0.5s ease;
-            white-space: nowrap;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
         }
+
+        .skills-category {
+            margin-bottom: 2.5rem;
+        }
+
+        .skills-category h2 {
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 1rem;
+            border-left: 4px solid rgb(170, 107, 228);
+            padding-left: 10px;
+        }
+
+        .skill-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .skill-card {
+            background-color: rgb(18, 18, 62);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 600;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, background-color 0.3s ease;
+            cursor: default;
+        }
+
+
+        .skill-card:hover {
+            transform: scale(1.03);
+            background-color: #e6e6ff;
+            color: black;
+        }
+
 
         .fourthsection {
             max-width: 80vw;
@@ -524,40 +543,64 @@
             </div>
         </section>
         <hr>
-        <section class="thirdsection" id="skills">
-            <h1 style="text-align: center; padding: 5px 5px;">Skills</h1>
-            <br>
-            <br>
-            <h3>HTML</h3>
-            <div class="progress-container">
-                <div class="progress-bar" style="width: 85%;">85%</div>
+        <section class="skills-section" id="skills">
+            <h1>Skills</h1>
+
+            <div class="skills-category">
+                <h2>Programming Languages</h2>
+                <div class="skill-grid">
+                    <div class="skill-card">Python</div>
+                    <div class="skill-card">Java (Basics)</div>
+                    <div class="skill-card">SQL</div>
+                    <div class="skill-card">JavaScript</div>
+                </div>
             </div>
-            <br>
-            <h3>CSS</h3>
-            <div class="progress-container">
-                <div class="progress-bar" style="width:75%;">75%</div>
+
+            <div class="skills-category">
+                <h2>Web Technologies</h2>
+                <div class="skill-grid">
+                    <div class="skill-card">HTML</div>
+                    <div class="skill-card">CSS</div>
+                    <div class="skill-card">React JS (Basics)</div>
+                    <div class="skill-card">Streamlit</div>
+                </div>
             </div>
-            <br>
-            <h3>React JS</h3>
-            <div class="progress-container">
-                <div class="progress-bar" style="width: 60%;">60%</div>
+
+            <div class="skills-category">
+                <h2>Cybersecurity & Testing</h2>
+                <div class="skill-grid">
+                    <div class="skill-card">Penetration Testing</div>
+                    <div class="skill-card">Vulnerability Assessment (XSS, SQLi, BAC)</div>
+                    <div class="skill-card">Ethical Hacking</div>
+                    <div class="skill-card">Kali Linux</div>
+                </div>
             </div>
-            <br>
-            <h3>Python</h3>
-            <div class="progress-container">
-                <div class="progress-bar" style="width: 80%;">80%</div>
+
+            <div class="skills-category">
+                <h2>Tools & Platforms</h2>
+                <div class="skill-grid">
+                    <div class="skill-card">Git</div>
+                    <div class="skill-card">GitHub</div>
+                    <div class="skill-card">Linux OS</div>
+                    <div class="skill-card">Windows OS</div>
+                    <div class="skill-card">Burp Suite</div>
+                    <div class="skill-card">Nmap</div>
+                    <div class="skill-card">Wireshark</div>
+                </div>
             </div>
-            <br>
-            <h3>Java</h3>
-            <div class="progress-container">
-                <div class="progress-bar" style="width: 60%;">60%</div>
-            </div>
-            <br>
-            <h3>SQL</h3>
-            <div class="progress-container">
-                <div class="progress-bar" style="width: 70%;">70%</div>
+
+            <div class="skills-category">
+                <h2>Concepts</h2>
+                <div class="skill-grid">
+                    <div class="skill-card">OOP</div>
+                    <div class="skill-card">Networking Basics</div>
+                    <div class="skill-card">OWASP Top 10</div>
+                    <div class="skill-card">SDLC</div>
+                    <div class="skill-card">Documentation</div>
+                </div>
             </div>
         </section>
+
         <hr>
         <section class="fourthsection" id="edu">
             <h1 style="text-align: center; padding: 5px 5px;">My Education</h1>
